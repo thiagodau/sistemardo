@@ -36,10 +36,6 @@ export function Form() {
           <img src={logoPrefeitura} alt="Logomarca Prefeitura" width={'80px'} />
         </div>
         <InformationsContract
-          number={numberOfContract}
-          nameConstruction={nameOfContract}
-          client={clientOfContract}
-          description={description}
           numberF={setNumberOfContract}
           nameConstructionF={setNameOfContract}
           clientF={setClientOfContract}

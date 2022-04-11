@@ -9,11 +9,21 @@ type RdoProps = {
 }
 
 export function ButtonGenerateRDO(props: RdoProps) {
+  const handleKeyPress = (e: any) => {
+    if (e.key === 'Enter') {
+      console.log('You must have pressed Enter ')
+      localStorage.setItem('@number', props.number)
+      localStorage.setItem('@nameConstruction', props.nameConstruction)
+      localStorage.setItem('@client', props.client)
+      localStorage.setItem('@description', props.description)
+    }
+  }
+
   return (
     <div>
 
-      <div className="button-generate">
-        <Link to={'/report'}>
+      <div className="button-generate" onKeyDown={handleKeyPress}>
+        <Link to={'/report'} style={{ color: '#fff' }}>
           <button
             onClick={() => {
               localStorage.setItem('@number', props.number)

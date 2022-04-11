@@ -7,3 +7,10 @@
   margin-bottom: 5px;
   padding: 10px;
 }
+
+.informationsContract textarea {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

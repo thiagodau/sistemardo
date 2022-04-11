@@ -58,10 +58,6 @@ export function Report() {
             onClick={() => { window.print() }} />
           <input
             type="button"
-            value="ALTERAR INFORMAÇÕES"
-            onClick={() => { window.location.replace('/') }} />
-          <input
-            type="button"
             value="REFAZER"
             onClick={() => {
               localStorage.clear();

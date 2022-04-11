@@ -1,10 +1,6 @@
 import './InformationsContract.css'
 
 type InformationsContractProps = {
-  number: string,
-  nameConstruction: string,
-  client: string,
-  description: string,
   numberF: Function,
   nameConstructionF: Function,
   clientF: Function,
