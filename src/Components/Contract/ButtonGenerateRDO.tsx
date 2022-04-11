@@ -6,6 +6,7 @@ type RdoProps = {
   nameConstruction: string,
   client: string,
   description: string,
+  location: string
 }
 
 export function ButtonGenerateRDO(props: RdoProps) {
@@ -16,6 +17,7 @@ export function ButtonGenerateRDO(props: RdoProps) {
       localStorage.setItem('@nameConstruction', props.nameConstruction)
       localStorage.setItem('@client', props.client)
       localStorage.setItem('@description', props.description)
+      localStorage.setItem('@location', props.location)
     }
   }
 
@@ -30,6 +32,7 @@ export function ButtonGenerateRDO(props: RdoProps) {
               localStorage.setItem('@nameConstruction', props.nameConstruction)
               localStorage.setItem('@client', props.client)
               localStorage.setItem('@description', props.description)
+              localStorage.setItem('@location', props.location)
             }}>
             Gerar RDO
           </button>

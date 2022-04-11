@@ -13,6 +13,7 @@ export function Form() {
   const [nameOfContract, setNameOfContract] = useState('');
   const [clientOfContract, setClientOfContract] = useState('');
   const [description, setDescription] = useState('');
+  const [location, setLocation] = useState('');
 
   useEffect(() => {
     /** AQUI TEM QUE VERIFICAR SE HÁ ALGO NO LOCALSTORARE E PREENCHER NOS CAMPOS DO FORMULARIO */
@@ -21,11 +22,13 @@ export function Form() {
       const client = localStorage.getItem('@client') as any
       const name = localStorage.getItem('@nameConstruction') as any
       const description = localStorage.getItem('@description') as any
+      const location = localStorage.getItem('@location') as any
 
       setNumberOfContract(number)
       setClientOfContract(client)
       setNameOfContract(name)
       setDescription(description)
+      setLocation(location)
     }
   }, [])
 
@@ -39,8 +42,15 @@ export function Form() {
           numberF={setNumberOfContract}
           nameConstructionF={setNameOfContract}
           clientF={setClientOfContract}
-          descriptionF={setDescription} />
-        <ButtonGenerateRDO number={numberOfContract} nameConstruction={nameOfContract} client={clientOfContract} description={description} />
+          descriptionF={setDescription}
+          locationF={setLocation} />
+        <ButtonGenerateRDO
+          number={numberOfContract}
+          nameConstruction={nameOfContract}
+          client={clientOfContract}
+          description={description}
+          location={location}
+        />
       </div>
     </div>
   )

@@ -31,12 +31,14 @@ export function Report() {
     const clientLocalStorage = localStorage.getItem('@client')
     const numberLocalStorage = localStorage.getItem('@number')
     const descriptionLocalStorage = localStorage.getItem('@description')
+    const locationLocalStorage = localStorage.getItem('@location')
 
     setData({
       name: nameLocalStorage,
       client: clientLocalStorage,
       number: numberLocalStorage,
-      description: descriptionLocalStorage
+      description: descriptionLocalStorage,
+      location: locationLocalStorage
     })
 
     //DATA DO DIA
@@ -73,11 +75,12 @@ export function Report() {
         </div>
         <div className='report-content'>
           <div>
-            <p><strong>Número do Contrato:</strong> {data.number}</p>
             <p><strong>Obra:</strong> {data.name}</p>
             <p><strong>Cliente:</strong> {data.client}</p>
+            <p><strong> Local:</strong> {data.location}</p>
           </div>
           <div>
+            <p><strong>Número do Contrato:</strong> {data.number}</p>
             <p><strong> Data do Relatório:</strong> {dateCurrent}</p>
           </div>
         </div>
