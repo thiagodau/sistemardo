@@ -1,0 +1,9 @@
+.informationsContract {
+  display: block;
+}
+
+.informationsContract input {
+  width: 100%;
+  margin-bottom: 5px;
+  padding: 10px;
+}

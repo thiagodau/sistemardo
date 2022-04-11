@@ -1,0 +1,83 @@
+.report-area {
+  text-align: center;
+}
+.report-buttons input {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  color: #fff;
+  background: #28226f;
+  border: 1px solid #28226f;
+  border-radius: 3px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.report-buttons input:hover {
+  color: #28226f;
+  background: #fff;
+  border: 1px solid #28226f;
+  transition-delay: 0.1s;
+  transition-duration: 0.3s;
+}
+
+.report {
+  display: block;
+  height: 100%;
+  padding: 30px;
+}
+
+.report-header {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  border: 1px solid rgb(34, 31, 31);
+  align-items: center;
+  justify-content: center;
+}
+
+.report-header h2 {
+  margin-left: 20px;
+}
+
+.report-content {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid rgb(34, 31, 31);
+  border-top: 0;
+  padding: 10px 20px 10px 20px;
+}
+
+.report-description {
+  border: 1px solid rgb(34, 31, 31);
+  border-top: 0;
+  padding: 10px 50px 10px 50px;
+}
+
+.report-content p,
+.report-description p {
+  padding: 0 0 5px 5px;
+}
+
+.report-pictures {
+  width: 100%;
+  border: 1px solid rgb(34, 31, 31);
+  border-top: 0;
+  padding: 20px 5px 20px 5px;
+  text-align: center;
+}
+
+.report-pictures img {
+  max-width: 250px;
+  height: 180px;
+  margin: 10px;
+}
+
+.report-signature {
+  display: flex;
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  justify-content: space-around;
+}
