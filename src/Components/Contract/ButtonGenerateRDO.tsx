@@ -20,7 +20,6 @@ export function ButtonGenerateRDO(props: RdoProps) {
               localStorage.setItem('@nameConstruction', props.nameConstruction)
               localStorage.setItem('@client', props.client)
               localStorage.setItem('@description', props.description)
-              window.location.replace('/report')
             }}>
             Gerar RDO
           </button>
