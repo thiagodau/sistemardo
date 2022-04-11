@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './ButtonGenerateRDO.css'
 
 type RdoProps = {
@@ -12,14 +13,18 @@ export function ButtonGenerateRDO(props: RdoProps) {
     <div>
 
       <div className="button-generate">
-        <button
-          onClick={() => {
-            localStorage.setItem('@number', props.number)
-            localStorage.setItem('@nameConstruction', props.nameConstruction)
-            localStorage.setItem('@client', props.client)
-            localStorage.setItem('@description', props.description)
-            window.location.replace('/report')
-          }}>Gerar RDO</button>
+        <Link to={'/report'}>
+          <button
+            onClick={() => {
+              localStorage.setItem('@number', props.number)
+              localStorage.setItem('@nameConstruction', props.nameConstruction)
+              localStorage.setItem('@client', props.client)
+              localStorage.setItem('@description', props.description)
+              window.location.replace('/report')
+            }}>
+            Gerar RDO
+          </button>
+        </Link>
 
       </div>
       <div>
