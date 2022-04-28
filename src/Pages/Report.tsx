@@ -32,13 +32,19 @@ export function Report() {
     const numberLocalStorage = localStorage.getItem('@number')
     const descriptionLocalStorage = localStorage.getItem('@description')
     const locationLocalStorage = localStorage.getItem('@location')
+    const processAdmLocalStorage = localStorage.getItem('@processAdm')
+    const measurementLocalStorage = localStorage.getItem('@measurement')
+    const oversightLocalStorage = localStorage.getItem('@oversight')
 
     setData({
       name: nameLocalStorage,
       client: clientLocalStorage,
       number: numberLocalStorage,
       description: descriptionLocalStorage,
-      location: locationLocalStorage
+      location: locationLocalStorage,
+      processAdm: processAdmLocalStorage,
+      measurement: measurementLocalStorage,
+      oversight: oversightLocalStorage,
     })
 
     //DATA DO DIA
@@ -50,6 +56,22 @@ export function Report() {
   const [data, setData] = useState({} as any);
   const [dateCurrent, setDateCurrent] = useState('');
 
+  const displayButtons = () => {
+    $('.report-buttons').addClass('display')
+    $('.report-pictures-images').addClass('display')
+
+    setTimeout(() => {
+      $('.report-buttons').removeClass('display')
+      $('.report-pictures-images').removeClass('display')
+
+    }, 1000)
+  }
+
+  const imprimir = () => {
+    displayButtons()
+    window.print()
+  }
+
   return (
     <div>
       <div className='report-area'>
@@ -57,7 +79,7 @@ export function Report() {
           <input
             type="button"
             value="IMPRIMIR RDO"
-            onClick={() => { window.print() }} />
+            onClick={() => { imprimir() }} />
           <input
             type="button"
             value="REFAZER"
@@ -73,30 +95,45 @@ export function Report() {
           <img src={logoPrefeitura} alt="Prefeitura de Aquidauana" width={'80px'} />
           <h2>Relatório Diário de Obra (RDO)</h2>
         </div>
-        <div className='report-content'>
-          <div>
-            <p><strong>Obra:</strong> {data.name}</p>
-            <p><strong>Cliente:</strong> {data.client}</p>
-            <p><strong> Local:</strong> {data.location}</p>
-          </div>
-          <div>
-            <p><strong>Número do Contrato:</strong> {data.number}</p>
-            <p><strong> Data do Relatório:</strong> {dateCurrent}</p>
-          </div>
-        </div>
 
-        <div className="report-description">
-          <p><strong>Atividades</strong></p>
-          <p>
-            {data.description}
-          </p>
+        <div className='report-content'>
+          <table>
+            <tbody>
+              <tr>
+                <td><p><strong>Obra: </strong> {data.name}</p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Número Contrato: </strong> {data.number}</p></td>
+                <td><p><strong>Processo Administrativo: </strong> {data.processAdm}</p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Medição: </strong> {data.measurement}</p></td>
+                <td><p><strong>Empresa: </strong> {data.client}</p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Fiscalização: </strong> {data.oversight}</p></td>
+                <td><p><strong>Data: </strong> {dateCurrent}</p></td>
+              </tr>
+              <tr>
+                <td><p><strong>Local: </strong>{data.location}</p></td>
+              </tr>
+              <tr>
+                <td>
+                  <p><strong>Atividades/Observações:</strong></p>
+                  <p>
+                    {data.description}
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
         <div className='report-pictures'>
           <form>
             <input
               type="file"
-              name="images"
+              className="report-pictures-images"
               id="fileInputControl"
               accept="image/*"
               multiple

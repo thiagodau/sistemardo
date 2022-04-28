@@ -1,6 +1,11 @@
+.display {
+  display: none;
+}
+
 .report-area {
   text-align: center;
 }
+
 .report-buttons input {
   margin-top: 10px;
   margin-left: 10px;
@@ -41,21 +46,18 @@
 }
 
 .report-content {
-  display: flex;
-  justify-content: space-around;
   border: 1px solid rgb(34, 31, 31);
   border-top: 0;
   padding: 10px 20px 10px 20px;
 }
 
-.report-description {
-  border: 1px solid rgb(34, 31, 31);
-  border-top: 0;
-  padding: 10px 50px 10px 50px;
+.report-content table {
+  width: 100%;
 }
 
 .report-content p {
   padding: 0 0 5px 5px;
+  margin: 5px;
 }
 
 .report-pictures {

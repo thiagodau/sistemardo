@@ -8,9 +8,16 @@
   padding: 10px;
 }
 
+.informationsContract p {
+  display: flex;
+}
+
+.informationsContract p>input {
+  margin-right: 5px;
+}
+
 .informationsContract textarea {
-  width: 100%;
-  margin-bottom: 5px;
+  margin-right: 5px;
   padding: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
