@@ -44,8 +44,13 @@ export function Form() {
     <div id='form' className="Form">
       <div style={{ width: '100%', maxWidth: '600px', margin: '30px', padding: '20px', background: '#fff', borderRadius: '4px', boxShadow: '0px 0px 15px #555' }}>
         <div>
-          <img src={logoPrefeitura} alt="Logomarca Prefeitura" width={'80px'} />
-          <h3>Diário de Obra</h3>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img src={logoPrefeitura} alt="Logomarca Prefeitura" width={'80px'} />
+            &nbsp;
+            &nbsp;
+            <h3>Prefeitura Municipal de Aquidauana</h3>
+          </div>
+          <h3>Relatório Fotográfico</h3>
           <br />
         </div>
         <InformationsContract

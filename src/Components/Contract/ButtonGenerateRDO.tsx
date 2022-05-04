@@ -39,7 +39,7 @@ export function ButtonGenerateRDO(props: RdoProps) {
         </Link>
       </div>
       <div>
-        <p style={{ fontSize: '11px', marginTop: '10px', color: '#d30034' }}>Versão de Teste @v1.1</p>
+        <p style={{ fontSize: '11px', marginTop: '10px', color: '#d30034' }}>Versão de Teste @v1.1.2</p>
       </div>
     </div>
   )
