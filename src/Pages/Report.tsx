@@ -92,8 +92,15 @@ export function Report() {
 
       <div className="report">
         <div className='report-header'>
-          <img src={logoPrefeitura} alt="Prefeitura de Aquidauana" width={'80px'} />
-          <h2>Relatório Diário de Obra (RDO)</h2>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <img src={logoPrefeitura} alt="Logomarca Prefeitura" width={'80px'} />
+            &nbsp;
+            &nbsp;
+            <h3>Prefeitura Municipal de Aquidauana</h3>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <h3>Relatório Fotográfico</h3>
+          </div>
         </div>
 
         <div className='report-content'>
@@ -145,11 +152,12 @@ export function Report() {
         </div>
         <div className='report-signature'>
           <div>
-            <span>______________________________</span>
+            <span>___________________________</span>
             <p>Assinatura</p>
           </div>
+          &nbsp;
           <div>
-            <span>______________________________</span>
+            <span>___________________________</span>
             <p>Assinatura</p>
           </div>
         </div>

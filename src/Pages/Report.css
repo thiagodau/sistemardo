@@ -28,14 +28,16 @@
 
 .report {
   display: block;
+  width: 100%;
   height: 100%;
   padding: 30px;
 }
 
 .report-header {
-  display: flex;
   width: 100%;
   padding: 5px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border: 1px solid rgb(34, 31, 31);
   align-items: center;
   justify-content: center;
@@ -48,7 +50,6 @@
 .report-content {
   border: 1px solid rgb(34, 31, 31);
   border-top: 0;
-  padding: 10px 20px 10px 20px;
 }
 
 .report-content table {
