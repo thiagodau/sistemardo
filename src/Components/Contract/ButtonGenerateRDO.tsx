@@ -38,9 +38,6 @@ export function ButtonGenerateRDO(props: RdoProps) {
           <button onClick={() => { setDataLocalStorage() }}> Gerar RDO </button>
         </Link>
       </div>
-      <div>
-        <p style={{ fontSize: '11px', marginTop: '10px', color: '#d30034' }}>Versão de Teste @v1.1.2</p>
-      </div>
     </div>
   )
 }
